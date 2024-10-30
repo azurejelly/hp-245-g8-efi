@@ -1,8 +1,6 @@
 # EFI
 OpenCore EFI files for my laptop, intended to be used with macOS Sonoma (should work with Sequoia however). Do not CTRL-C & CTRL+V this - it will likely not work. Uses OC version `1.0.2`.
 
-<img width="392" alt="image" src=".github/about.png">
-
 ## What works
 - Wi-Fi & Bluetooth (Intel Wi-Fi 6 AX200)
 - Ethernet
