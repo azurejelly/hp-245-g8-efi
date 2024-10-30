@@ -1,19 +1,29 @@
 # EFI
 OpenCore EFI files for my laptop, intended to be used with macOS Sonoma (should work with Sequoia however). Do not CTRL-C & CTRL+V this - it will likely not work. Uses OC version `1.0.2`.
 
+## Specifications
+- **CPU:** AMD Ryzen 5 5500U (6 cores, 12 threads)
+- **GPU:** iGPU, 1 GB of VRAM
+- **RAM:** 1x 8 GB DDR4 running at 3200 MHz
+- **Wi-Fi/Bluetooth:** Originally a Realtek RTL8822CE, replaced with an Intel AX200
+- **SSD:** A `GIGABYTE GP-GSM2NE3256GNTD` NVMe that honestly sucks (40% wearout with only 19 TB written/read)
+
 ## What works
-- Wi-Fi & Bluetooth (Intel Wi-Fi 6 AX200)
+- Wi-Fi and Bluetooth
 - Ethernet
 - All USB ports
 - Speakers
 - Sleep
 - Keyboard
 - Trackpad
-- Graphics
+- iGPU
 
 ## What doesn't
 - AirDrop
-- Certain Continuity features (only functional ones seem to be Universal Clipboard & Handoff)
+- HDMI audio
+- Hardware DRM/VCN
+- Mute LED on keyboard
+- Most Continuity features (only functional ones seem to be Universal Clipboard & Handoff)
 
 ## Kexts
 Below is a list of kernel extensions that are used, along with the functionality that each one serves:
@@ -69,6 +79,3 @@ For kernel extensions not included in this repository, you should get them from 
 - HDMI audio, hardware encoding/decoding and hardware DRM is non-functional
   - **Affected versions:** macOS 10.15+
   - **Workaround:** N/A, see [this issue](https://github.com/ChefKissInc/NootedRed/issues/225) for HDMI audio and [this one](https://github.com/ChefKissInc/NootedRed/issues/28) for hardware DRM/VCN.
-- Speakers do not work
-  - **Affected versions:** macOS 15
-  - **Workaround:** N/A, see [this issue](https://github.com/acidanthera/bugtracker/issues/2415).
